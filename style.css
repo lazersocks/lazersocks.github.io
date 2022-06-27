@@ -1,0 +1,296 @@
+body {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Nav bar*/
+
+a.nav-link {
+    color: black !important;
+    font-size: 20px;
+}
+
+#navbar-div {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+    padding: 10px 40px;
+    font-weight: 500;
+}
+
+/* Small screen */
+label[for="toggle"] {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: black;
+    z-index: 6;
+    font-size: 3rem;
+}
+
+.navigation--responsive {
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+svg.hamburger {
+    display: none;
+}
+
+/* backdrop style */
+
+#backdrop {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 10px;
+    padding: 0px 8%;
+    margin-top: 8%;
+    margin-bottom: 2%;
+}
+
+/* #backdrop>div {
+    outline: 1px solid blue;
+  
+} */
+
+/*left col styling */
+#left-col {
+    width: 50%;
+    color: #21243d;
+   
+
+}
+
+#left-col>h2{
+    font-weight: 700;
+    font-size: 44px;
+    
+}
+
+#left-col>p{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#left-col-button {
+    font-weight: 500;
+    font-size: 18px;
+    color: white !important;
+    background-color: #ff6464;
+    padding: 10px 20px;
+    border: 0;
+}
+
+/*right col styiling */
+#right-col {
+    width: 40%;
+    text-align: center;
+
+}
+
+#img{
+    width: 290px;
+    height: auto;
+}
+
+/*recent posts styling*/
+
+#recent-posts{
+    background-color: #edf7fa;
+    padding: 3% 9.79%;
+}
+
+#recent-header{
+display: flex;
+justify-content: space-between;
+}
+#recent-header>h4{
+    font-weight: 400;
+    font-size: 22px;
+    color: #21243d;
+    margin: 0px;
+}
+
+#card-container{
+display: flex;
+column-gap: 2%;
+}
+div.card {
+    color: #21243d;
+    font-weight: 400;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 22px;
+}
+
+div.card >h2 {
+    font-weight: 700;
+    color: #21243d;
+    font-size:26 ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div.card > span {
+    font-size: 18px;
+    padding: 5px 10px;
+}
+div.card >p {
+    font-size: 15px;
+}
+
+/* featured work styling */
+
+#featured-work{
+    background-color: white;
+    padding: 2% 9.79%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+
+}
+
+#featured-work > h4 {
+    font-weight: 400;
+    font-size: 22px;
+    color: #21243d;
+    margin-bottom: 3%;   
+}
+
+div.work-container {
+    display: flex;
+    column-gap: 3.5%;
+}
+
+span.pill{
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: #142850;
+    padding: 1.5px 15px;
+}
+span.work-text{
+    color: #8695a4;
+    font-size: 20px;
+    margin-left: 16px;
+}
+
+div.work-container >div > p{
+    color: #212430;
+    font-size: 16px;
+}
+
+div.work-container > img {
+    border-radius: 6px;
+}
+
+#icons {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    color: #142580 ;
+    column-gap: 10px;
+    margin-top: 3%;
+    /* align-items: center;
+    align-items: baseline; */
+}
+#icons>a{
+    color: #142580 ;
+}
+
+#bottom {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: #21243D;
+}
+
+
+@media screen and (max-width:500px) {
+    #backdrop{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    #left-col {
+        width: 100%;
+        
+    }
+
+    #left-col>h2{
+        font-weight: 700;
+        font-size: 34px;
+        
+    }
+
+
+    #right-col{
+        width: 100%;
+    }
+
+    #img{
+        width: 200px;
+        height: auto;
+    }
+
+    #recent-posts {
+        padding: 2% 4%;
+    }
+
+    #card-container{
+        flex-direction: column;
+        row-gap: 13px;
+        margin-bottom: 20px;
+    }
+
+    div.work-container {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+
+
+    /* small screen navigation bar*/
+    #navbar-div {
+        display: none;
+    }
+
+    svg.hamburger {
+        display: block;
+    }
+
+    .navigation--responsive {
+        display: block;
+        background: white;
+        width: 200px;
+        height: 100vh;
+        position: absolute;
+        top: -100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 13px;
+        transition: top 1s;
+    }
+    a.nav-link{
+        display: flex;
+        flex-direction: column;
+        column-gap: 20%;
+        padding: 50px 20px 50px 30px;
+    }
+
+    #toggle:checked ~ .navigation--responsive {
+        top: 0vh;
+    } 
+
+
+   
+}
